@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import "reset";
+@import "home";
+@import "listings";
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(135deg, rgba(52, 101, 247, .3) 0%, rgba(220, 39, 230, .3) 100%), url("https://images.unsplash.com/photo-1508711046474-2f4c2d3d30ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    color: white;
+    .fas {
+        margin-left: 10px;
+    }
+    .left-menu {
+        display: flex;
+        .logo {
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .city {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 20px;
+        }
+    }
+    .right-menu {
+        display: flex;
+        .user-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .user-dropdown {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .post-btn {
+            font-weight: 300;
+            text-transform: capitalize;
+            padding: 15px 20px;
+            background: rgb(16, 16, 187);
+            color: white;
+        }
+    }
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
