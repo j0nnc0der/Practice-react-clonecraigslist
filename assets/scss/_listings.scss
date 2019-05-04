@@ -1,3 +1,66 @@
 .listings-page {
-    background: #fff;
+    background: rgb(255, 255, 255);
+    #filter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 50px 0;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+        select {
+            background: rgb(255, 255, 255);
+            border-radius: 5px;
+            font-size: 1.3rem;
+            padding: 10px;
+            min-width: 100px;
+            border: 2px solid #ADBED2;
+            color: #ADBED2;
+            margin-right: 20px;
+        }
+        &.button {
+            flex-direction: row;
+            align-items: flex-end;
+        }
+        .primary-btn {
+            padding: 10px 20px;
+            background: #2A7DDD;
+            color: white;
+        }
+        .primary-btn,
+        .reset-btn {
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin-right: 20px;
+            &:hover {
+                background: #F7F8FA;
+            }
+        }
+    }
+    #list-view {
+        background: #F7F8FA;
+        padding: 20px 0;
+        .white-box {
+            background: white;
+        }
+        .change-view {
+            display: flex;
+            flex-direction: row;
+        }
+        .all-items {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            .item {
+                border: 1px solid rgb(61, 112, 61);
+                border-radius: 5px;
+            }
+        }
+    }
 }
