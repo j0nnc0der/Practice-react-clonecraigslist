@@ -5,7 +5,7 @@ import Header from './includes/Header.js';
 import Home from './pages/Home.js';
 import Listings from './pages/Listings.js';
 import Category from './pages/Category.js';
-import Item from './pages/Item.js';
+import Details from './pages/Details.js';
 
 export default class App extends Component {
 	constructor() {
@@ -29,7 +29,7 @@ export default class App extends Component {
 					<Route
 						exact
 						path="/:city/:category/:listings/:items"
-						component={Item}
+						component={Details}
 					/>
 					{/* <Home /> */}
 				</div>

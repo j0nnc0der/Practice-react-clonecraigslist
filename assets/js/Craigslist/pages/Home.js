@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 export default class Home extends Component {
 	constructor() {
@@ -7,6 +8,16 @@ export default class Home extends Component {
 		this.state = {
 			name: 'Jon'
 		};
+	}
+	componentWillMount() {
+		axios
+			.get('/api/categories')
+			.then(function(response) {
+				console.log(response.data);
+			})
+			.catch(function(error) {
+				console.log(error);
+			});
 	}
 	clickedBtn = () => {
 		console.log();
@@ -76,7 +87,7 @@ export default class Home extends Component {
 		return testTags.map((item, i) => (
 			<div key={i} className="tag">
 				{' '}
-				Apple MacBook
+				Apple MacBook{' '}
 			</div>
 		));
 	};
@@ -85,18 +96,18 @@ export default class Home extends Component {
 			<div className="Home">
 				<div className="container">
 					<h1>
-						Connecting People <br /> Everywere :){' '}
+						Connecting People <br /> Everywere: ){' '}
 					</h1>{' '}
-					<section className={'Links'}>{this.loopCategories()}</section>{' '}
+					<section className={'Links'}> {this.loopCategories()} </section>{' '}
 					<section className={'trending'}>
 						<input type="text" name="search" className="search" />
 						<div className="title">
 							<i className="far fa-clock" />
-							Trending Now
-						</div>
-						<div className="trending-tags">{this.loopTags()}</div>
-					</section>
-				</div>
+							Trending Now{' '}
+						</div>{' '}
+						<div className="trending-tags"> {this.loopTags()} </div>{' '}
+					</section>{' '}
+				</div>{' '}
 			</div>
 		);
 	}

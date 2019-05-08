@@ -9,7 +9,8 @@
         "dev:webpack": "webpack --mode development --env.NODE_ENV=dev",
         "build:webpack": "webpack --mode production --env.NODE_ENV=production",
         "watch": "gulp",
-        "proxy": "gulp watch-proxy"
+        "proxy": "gulp watch-proxy",
+        "server": "node server.js"
     },
     "author": "",
     "license": "ISC",
